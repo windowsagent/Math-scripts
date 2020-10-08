@@ -1,0 +1,28 @@
+# Collects the input from the user (numbers)
+import math
+print("Calculadora de el ángulo de dos puntos en una gráfica")
+print("Knox Software Corporation - 2020")
+print('Inserta el valor de la primera x')
+x1 = float(input())
+print('Inserta el valor de la primera y')
+y1 = float(input())
+print('Inserta el valor de la segunda x')
+x2 = int(input())
+print('Inserta el valor de la segunda y')
+y2 = int(input())
+
+m = (y2 - y1) / (x2 - x1)
+print("El valor de la pendiente")
+print(m)
+# Inverse tangent with m
+Decimal = math.degrees(math.atan(m))
+print("Tu cantidad en grados es:")
+print(Decimal)
+# Converts decimal degrees to DMS (Degrees Minutes Seconds)
+print("Tu cantidad en DMS (Grados minutos y segundos)")
+D = int(Decimal)
+M = int((Decimal - D) * 60)
+S = (Decimal - D - M/60) * 3600.00
+print(D)
+print(M)
+print(S)
